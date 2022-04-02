@@ -20,15 +20,15 @@ class PublisherManager {
         let data: [String: Any] = [
             
             "author": [
-                "email": "wayne@school.appworks.tw",
-                "id": "waynechen323",
-                "name": "AKA小安老師"
+                "email": "Jenny.Hung@gmail.com",
+                "id": "JennyHung0402",
+                "name": "Jenny Hung"
             ],
             "title": title,
-            "content": category,
+            "content": content,
             "createdTime": NSDate().timeIntervalSince1970,
             "id": document.documentID,
-            "category": content
+            "category": category
         ]
         
         articles.document(document.documentID).setData(data)
@@ -38,7 +38,7 @@ class PublisherManager {
     // MARK: - 取得 Firebase Data (所有 Articles)
     func getData(completion: @escaping (_ data: [Publisher]) -> Void) {
         
-        articles.getDocuments { (snapshot, error) in
+        articles.addSnapshotListener { (snapshot, error) in
             
             var publishers: [Publisher] = []
             
@@ -92,7 +92,13 @@ class PublisherManager {
                 
             }
             
-            completion(publishers)
+            let sortedPublisher: [Publisher] = publishers.sorted { (lhs, rhs) in
+                
+                return lhs.createdTime > rhs.createdTime // 由新到舊排序
+                
+            }
+            
+            completion(sortedPublisher)
             
         }
         

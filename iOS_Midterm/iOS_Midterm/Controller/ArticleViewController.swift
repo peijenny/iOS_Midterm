@@ -39,8 +39,10 @@ class ArticleViewController: UIViewController {
             publisherManager.addData(
                 title: inputTitle,
                 category: inputCategory,
-                content: inputCategory
+                content: inputContent
             )
+            
+            self.dismiss(animated: true)
             
         }
         
