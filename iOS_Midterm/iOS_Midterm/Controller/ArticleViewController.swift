@@ -17,12 +17,12 @@ class ArticleViewController: UIViewController {
     
     var publisherManager = PublisherManager()
     
-    var placeholder = UILabel()
-    
-    var donebtn = UIButton()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        inputContentTextView.text = "input content"
+        
+        inputContentTextView.textColor = UIColor.systemGray3
         
         inputContentTextView.layer.borderColor = UIColor.systemGray5.cgColor
         
@@ -30,20 +30,13 @@ class ArticleViewController: UIViewController {
         
         inputContentTextView.layer.cornerRadius = 5
         
-        inputContentTextView.text = "input content"
-        
-        inputContentTextView.textColor = UIColor.systemGray3
-        
         inputTitleTextField.delegate = self
         
         inputCategoryTextField.delegate = self
         
         inputContentTextView.delegate = self
         
-
-
     }
-    
     
     @IBAction func sendArticleButton(_ sender: UIButton) {
         
@@ -52,26 +45,46 @@ class ArticleViewController: UIViewController {
               let inputContent = inputContentTextView.text
         else { return }
         
-        if inputTitle == "" || inputCategory == "" || inputContent == "" {
+        if inputTitle == "" {
             
-            print("Input textField can't not be empty!")
+            print("Title can't not be empty!")
+            
+        } else if inputCategory == "" {
+            
+            print("Category can't not be empty!")
+            
+        } else if inputContent == "" {
+            
+            print("Content can't not be empty!")
             
         } else {
             
-            publisherManager.addData(
-                title: inputTitle,
-                category: inputCategory,
-                content: inputContent
-            )
+            let category = ["Beauty", "SchoolLife", "Other"]
             
-            self.dismiss(animated: true)
+            // 判斷輸入的 Category 是否存在
+            let filterCategory = category.filter { $0 == inputCategory.capitalized }
+            
+            if filterCategory == [] {
+                
+                print("No such category!")
+                
+            } else {
+                
+                publisherManager.addData(
+                    title: inputTitle,
+                    category: inputCategory,
+                    content: inputContent
+                )
+
+                self.dismiss(animated: true)
+                
+            }
             
         }
         
     }
     
 }
-
 
 extension ArticleViewController: UITextFieldDelegate {
     

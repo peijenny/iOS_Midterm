@@ -50,7 +50,6 @@ class ViewController: UIViewController {
 
         AddArticleButton.imageView?.contentMode = .scaleAspectFill
 
-        
         AddArticleButton.layer.cornerRadius = AddArticleButton.frame.width / 2
         
     }
@@ -70,7 +69,6 @@ class ViewController: UIViewController {
                 print(error)
                 
             }
-            
             
         })
     }
