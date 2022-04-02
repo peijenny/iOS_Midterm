@@ -15,7 +15,7 @@ struct Publisher {
     
     var content: String
     
-    var createdTime: TimeInterval   // Int 轉 TimeInterval
+    var createdTime: String
     
     var id: String
     

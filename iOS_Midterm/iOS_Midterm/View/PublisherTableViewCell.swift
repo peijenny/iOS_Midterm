@@ -30,4 +30,21 @@ class PublisherTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func showData(publisher: Publisher) {
+        
+        // 顯示所有 TableViewCell 內容
+        
+        articleTitleLabel.text = publisher.title
+        
+        authorNameLabel.text = publisher.author.name
+        
+        createdTimeLabel.text = publisher.createdTime
+        
+        categoryLabel.text = publisher.category
+        
+        articleContentLabel.text = publisher.content
+        
+        
+    }
+    
 }

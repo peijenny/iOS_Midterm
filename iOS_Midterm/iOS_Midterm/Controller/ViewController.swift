@@ -21,7 +21,19 @@ class ViewController: UIViewController {
         
     }
     
+    @IBOutlet weak var AddArticleButton: UIButton!
+    
     var publisherManager = PublisherManager()
+    
+    var publishers: [Publisher] = [] {
+        
+        didSet {
+            
+            publisherTableView.reloadData()
+            
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +41,41 @@ class ViewController: UIViewController {
         // 註冊 Publisher TableView Cell
         publisherTableView.register(UINib(nibName: String(describing: PublisherTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: PublisherTableViewCell.self))
         
-        //publisherManager.addData()
-        
-        publisherManager.fetchData()
+        fetchData()
         
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
 
+        AddArticleButton.layer.cornerRadius = AddArticleButton.frame.width / 2
+        
+    }
+    
+    func fetchData() {
+        
+        publisherManager.getData { [weak self] data in
+            
+            self?.publishers = data
+            
+        }
+    }
+
+    @IBAction func presentToArticlePage(_ sender: UIButton) {
+        
+        let articleviewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: ArticleViewController.self))
+        
+        guard let articleviewController = articleviewController as? ArticleViewController else { return }
+        
+        let navgationController = UINavigationController(rootViewController: articleviewController)
+
+        navgationController.modalPresentationStyle = .fullScreen
+        
+        navgationController.navigationBar.topItem?.title = "Publisher"
+        
+        self.present(navgationController, animated: true, completion: nil)
+        
+    }
 }
 
 
@@ -42,7 +83,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return publishers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,19 +92,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         guard let cell = cell as? PublisherTableViewCell else { return cell }
         
-        // 顯示所有 TableViewCell 內容
-        
-        cell.articleTitleLabel.text = "Test Title"
-        
-        cell.authorNameLabel.text = "Test Name"
-        
-        cell.createdTimeLabel.text = "20220402"
-        
-        cell.categoryLabel.text = "Other"
-        
-        cell.articleContentLabel.text = "Test Content"
-        
-        
+        cell.showData(publisher: publishers[indexPath.row])
         
         return cell
     }

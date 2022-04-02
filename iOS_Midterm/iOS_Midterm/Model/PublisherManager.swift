@@ -13,7 +13,7 @@ class PublisherManager {
     let articles = Firestore.firestore().collection("articles")
     
     // 新增
-    func addData() {
+    func addData(title: String, category: String, content: String) {
         
         let document = articles.document()
         
@@ -24,11 +24,11 @@ class PublisherManager {
                 "id": "waynechen323",
                 "name": "AKA小安老師"
             ],
-            "title": "IU「亂穿」竟美出新境界！笑稱自己品味奇怪　網笑：靠顏值撐住女神氣場",
-            "content": "南韓歌手IU（李知恩）無論在歌唱方面或是近期的戲劇作品都有亮眼的成績，但俗話說人無完美、美玉微瑕，曾再跟工作人員的互動影片中坦言自己品味很奇怪，近日在IG上分享了宛如「媽媽們青春時代的玉女歌手」超復古穿搭造型，卻意外美出新境界。",
+            "title": title,
+            "content": category,
             "createdTime": NSDate().timeIntervalSince1970,
             "id": document.documentID,
-            "category": "Beauty"
+            "category": content
         ]
         
         articles.document(document.documentID).setData(data)
@@ -36,25 +36,63 @@ class PublisherManager {
     }
     
     // MARK: - 取得 Firebase Data (所有 Articles)
-    func fetchData() {
-        // get Data
+    func getData(completion: @escaping (_ data: [Publisher]) -> Void) {
+        
         articles.getDocuments { (snapshot, error) in
             
-            if let snapshot = snapshot {
+            var publishers: [Publisher] = []
+            
+            guard let snapshot = snapshot else {
+
+                print("Error fetching document: \(error!)")
+
+                return
+            }
+            
+            for document in snapshot.documents {
                 
-                for document in snapshot.documents {
-                    
-                    print(document.data())
-                    
-                }
+                let data = document.data()
+                
+                guard let authorData = data["author"] as? Dictionary<String, String> else { return }
+                
+                let author: Author = Author(
+                    email: authorData["email"] ?? "",
+                    id: authorData["id"] ?? "",
+                    name: authorData["name"] ?? ""
+                )
+                
+                let title = data["title"] as? String ?? ""
+                
+                let content = data["content"] as? String ?? ""
+                
+                let id = data["id"] as? String ?? ""
+                
+                let category = data["category"] as? String ?? ""
+                
+                guard let createdTime = data["createdTime"] as? TimeInterval else { return }
+                
+                let date = Date(timeIntervalSince1970: createdTime)
+                
+                let dateFormatter = DateFormatter()
+                
+                dateFormatter.dateFormat = "yyyy.MM.dd HH:mm"
+                
+                let createDate = dateFormatter.string(from: date)
+
+                let publisher: Publisher = Publisher(
+                    author: author,
+                    title: title,
+                    content: content,
+                    createdTime: createDate,
+                    id: id,
+                    category: category
+                )
+                
+                publishers.append(publisher)
                 
             }
             
-            if let error = error {
-                
-                print(error)
-                
-            }
+            completion(publishers)
             
         }
         

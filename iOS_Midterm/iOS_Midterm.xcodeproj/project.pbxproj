@@ -18,6 +18,7 @@
 		2819756127F7DDAF0089D1F7 /* PublisherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2819755F27F7DDAF0089D1F7 /* PublisherTableViewCell.xib */; };
 		2819756627F7E3690089D1F7 /* PublisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2819756527F7E3690089D1F7 /* PublisherManager.swift */; };
 		2819756827F7E7080089D1F7 /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2819756727F7E7080089D1F7 /* Publisher.swift */; };
+		28C3ABC427F7FC7900020D1C /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28C3ABC327F7FC7900020D1C /* ArticleViewController.swift */; };
 		F912DB09210CEDEED8E9462C /* Pods_iOS_Midterm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365F887AD87E4BD66DD2D5CC /* Pods_iOS_Midterm.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		2819755F27F7DDAF0089D1F7 /* PublisherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublisherTableViewCell.xib; sourceTree = "<group>"; };
 		2819756527F7E3690089D1F7 /* PublisherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherManager.swift; sourceTree = "<group>"; };
 		2819756727F7E7080089D1F7 /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
+		28C3ABC327F7FC7900020D1C /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
 		365F887AD87E4BD66DD2D5CC /* Pods_iOS_Midterm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Midterm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D6125BB72EF61EAFA5810C1 /* Pods-iOS_Midterm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Midterm.release.xcconfig"; path = "Target Support Files/Pods-iOS_Midterm/Pods-iOS_Midterm.release.xcconfig"; sourceTree = "<group>"; };
 		EC42FAA0F98DEB72FE46EBAC /* Pods-iOS_Midterm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Midterm.debug.xcconfig"; path = "Target Support Files/Pods-iOS_Midterm/Pods-iOS_Midterm.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				2819754A27F7D97A0089D1F7 /* ViewController.swift */,
+				28C3ABC327F7FC7900020D1C /* ArticleViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			files = (
 				2819756827F7E7080089D1F7 /* Publisher.swift in Sources */,
 				2819756027F7DDAF0089D1F7 /* PublisherTableViewCell.swift in Sources */,
+				28C3ABC427F7FC7900020D1C /* ArticleViewController.swift in Sources */,
 				2819754B27F7D97A0089D1F7 /* ViewController.swift in Sources */,
 				2819756627F7E3690089D1F7 /* PublisherManager.swift in Sources */,
 				2819754727F7D97A0089D1F7 /* AppDelegate.swift in Sources */,

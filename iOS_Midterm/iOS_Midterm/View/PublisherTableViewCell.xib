@@ -10,38 +10,38 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="PublisherTableViewCell" customModule="iOS_Midterm" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="article title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTM-Cc-Ygd">
-                        <rect key="frame" x="16" y="16" width="382" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="article title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTM-Cc-Ygd">
+                        <rect key="frame" x="16" y="16" width="382" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="author name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9V-rp-GWb">
-                        <rect key="frame" x="16" y="53" width="191" height="21"/>
+                        <rect key="frame" x="16" y="46.5" width="191" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="created time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Rc-J1-jMf">
-                        <rect key="frame" x="16" y="90" width="191" height="21"/>
+                        <rect key="frame" x="16" y="76.5" width="191" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="category" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RBY-iv-9Ep">
-                        <rect key="frame" x="272" y="53" width="126" height="21"/>
+                        <rect key="frame" x="272" y="46.5" width="126" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="article content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEh-Nr-rv9">
-                        <rect key="frame" x="16" y="127" width="382" height="20.5"/>
+                        <rect key="frame" x="16" y="107" width="382" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -64,9 +64,8 @@
                     <constraint firstItem="7Rc-J1-jMf" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.0954545" id="e9t-Xn-DRc"/>
                     <constraint firstItem="bTM-Cc-Ygd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="fCC-h7-1Bh"/>
                     <constraint firstItem="7Rc-J1-jMf" firstAttribute="top" secondItem="h9V-rp-GWb" secondAttribute="bottom" constant="16" id="giV-KV-ldZ"/>
-                    <constraint firstItem="bTM-Cc-Ygd" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.0954545" id="jCQ-Pt-xNu"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KEh-Nr-rv9" secondAttribute="bottom" constant="22.5" id="nl9-2Y-bjK"/>
                     <constraint firstItem="h9V-rp-GWb" firstAttribute="top" secondItem="bTM-Cc-Ygd" secondAttribute="bottom" constant="16" id="q9w-n3-PcN"/>
-                    <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="KEh-Nr-rv9" secondAttribute="bottom" constant="72.5" id="y0E-db-lc6"/>
                     <constraint firstItem="h9V-rp-GWb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="zcg-FR-j8p"/>
                 </constraints>
             </tableViewCellContentView>
