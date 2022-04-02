@@ -13,6 +13,12 @@
 		2819754E27F7D97A0089D1F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2819754C27F7D97A0089D1F7 /* Main.storyboard */; };
 		2819755027F7D97B0089D1F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2819754F27F7D97B0089D1F7 /* Assets.xcassets */; };
 		2819755327F7D97B0089D1F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2819755127F7D97B0089D1F7 /* LaunchScreen.storyboard */; };
+		2819755B27F7DC150089D1F7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2819755A27F7DC150089D1F7 /* GoogleService-Info.plist */; };
+		2819756027F7DDAF0089D1F7 /* PublisherTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2819755E27F7DDAF0089D1F7 /* PublisherTableViewCell.swift */; };
+		2819756127F7DDAF0089D1F7 /* PublisherTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2819755F27F7DDAF0089D1F7 /* PublisherTableViewCell.xib */; };
+		2819756627F7E3690089D1F7 /* PublisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2819756527F7E3690089D1F7 /* PublisherManager.swift */; };
+		2819756827F7E7080089D1F7 /* Publisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2819756727F7E7080089D1F7 /* Publisher.swift */; };
+		F912DB09210CEDEED8E9462C /* Pods_iOS_Midterm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365F887AD87E4BD66DD2D5CC /* Pods_iOS_Midterm.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,14 @@
 		2819754F27F7D97B0089D1F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2819755227F7D97B0089D1F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2819755427F7D97B0089D1F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2819755A27F7DC150089D1F7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2819755E27F7DDAF0089D1F7 /* PublisherTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherTableViewCell.swift; sourceTree = "<group>"; };
+		2819755F27F7DDAF0089D1F7 /* PublisherTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublisherTableViewCell.xib; sourceTree = "<group>"; };
+		2819756527F7E3690089D1F7 /* PublisherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublisherManager.swift; sourceTree = "<group>"; };
+		2819756727F7E7080089D1F7 /* Publisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Publisher.swift; sourceTree = "<group>"; };
+		365F887AD87E4BD66DD2D5CC /* Pods_iOS_Midterm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOS_Midterm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D6125BB72EF61EAFA5810C1 /* Pods-iOS_Midterm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Midterm.release.xcconfig"; path = "Target Support Files/Pods-iOS_Midterm/Pods-iOS_Midterm.release.xcconfig"; sourceTree = "<group>"; };
+		EC42FAA0F98DEB72FE46EBAC /* Pods-iOS_Midterm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Midterm.debug.xcconfig"; path = "Target Support Files/Pods-iOS_Midterm/Pods-iOS_Midterm.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F912DB09210CEDEED8E9462C /* Pods_iOS_Midterm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +57,8 @@
 			children = (
 				2819754527F7D97A0089D1F7 /* iOS_Midterm */,
 				2819754427F7D97A0089D1F7 /* Products */,
+				95A551FF049C8C09065A3858 /* Pods */,
+				A8D0EB22FE4D36015AD3B61A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +73,61 @@
 		2819754527F7D97A0089D1F7 /* iOS_Midterm */ = {
 			isa = PBXGroup;
 			children = (
+				2819756427F7DDC90089D1F7 /* Controller */,
+				2819756327F7DDBE0089D1F7 /* View */,
+				2819756227F7DDB40089D1F7 /* Model */,
 				2819754627F7D97A0089D1F7 /* AppDelegate.swift */,
 				2819754827F7D97A0089D1F7 /* SceneDelegate.swift */,
-				2819754A27F7D97A0089D1F7 /* ViewController.swift */,
 				2819754C27F7D97A0089D1F7 /* Main.storyboard */,
 				2819754F27F7D97B0089D1F7 /* Assets.xcassets */,
 				2819755127F7D97B0089D1F7 /* LaunchScreen.storyboard */,
 				2819755427F7D97B0089D1F7 /* Info.plist */,
+				2819755A27F7DC150089D1F7 /* GoogleService-Info.plist */,
 			);
 			path = iOS_Midterm;
+			sourceTree = "<group>";
+		};
+		2819756227F7DDB40089D1F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2819756527F7E3690089D1F7 /* PublisherManager.swift */,
+				2819756727F7E7080089D1F7 /* Publisher.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2819756327F7DDBE0089D1F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2819755E27F7DDAF0089D1F7 /* PublisherTableViewCell.swift */,
+				2819755F27F7DDAF0089D1F7 /* PublisherTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2819756427F7DDC90089D1F7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2819754A27F7D97A0089D1F7 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		95A551FF049C8C09065A3858 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EC42FAA0F98DEB72FE46EBAC /* Pods-iOS_Midterm.debug.xcconfig */,
+				8D6125BB72EF61EAFA5810C1 /* Pods-iOS_Midterm.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A8D0EB22FE4D36015AD3B61A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				365F887AD87E4BD66DD2D5CC /* Pods_iOS_Midterm.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2819755727F7D97B0089D1F7 /* Build configuration list for PBXNativeTarget "iOS_Midterm" */;
 			buildPhases = (
+				B42855D455E68B9F2100BAF7 /* [CP] Check Pods Manifest.lock */,
 				2819753F27F7D97A0089D1F7 /* Sources */,
 				2819754027F7D97A0089D1F7 /* Frameworks */,
 				2819754127F7D97A0089D1F7 /* Resources */,
+				C3CE860CABE729604610E15D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,7 +190,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2819755B27F7DC150089D1F7 /* GoogleService-Info.plist in Resources */,
 				2819755327F7D97B0089D1F7 /* LaunchScreen.storyboard in Resources */,
+				2819756127F7DDAF0089D1F7 /* PublisherTableViewCell.xib in Resources */,
 				2819755027F7D97B0089D1F7 /* Assets.xcassets in Resources */,
 				2819754E27F7D97A0089D1F7 /* Main.storyboard in Resources */,
 			);
@@ -133,12 +200,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B42855D455E68B9F2100BAF7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOS_Midterm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3CE860CABE729604610E15D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS_Midterm/Pods-iOS_Midterm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOS_Midterm/Pods-iOS_Midterm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOS_Midterm/Pods-iOS_Midterm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2819753F27F7D97A0089D1F7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2819756827F7E7080089D1F7 /* Publisher.swift in Sources */,
+				2819756027F7DDAF0089D1F7 /* PublisherTableViewCell.swift in Sources */,
 				2819754B27F7D97A0089D1F7 /* ViewController.swift in Sources */,
+				2819756627F7E3690089D1F7 /* PublisherManager.swift in Sources */,
 				2819754727F7D97A0089D1F7 /* AppDelegate.swift in Sources */,
 				2819754927F7D97A0089D1F7 /* SceneDelegate.swift in Sources */,
 			);
@@ -282,6 +394,7 @@
 		};
 		2819755827F7D97B0089D1F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC42FAA0F98DEB72FE46EBAC /* Pods-iOS_Midterm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +422,7 @@
 		};
 		2819755927F7D97B0089D1F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D6125BB72EF61EAFA5810C1 /* Pods-iOS_Midterm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
