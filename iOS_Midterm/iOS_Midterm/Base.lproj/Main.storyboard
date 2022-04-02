@@ -37,12 +37,8 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xie-Cx-1GC">
-                                <rect key="frame" x="320" y="768" width="78" height="78"/>
+                                <rect key="frame" x="315" y="763" width="83" height="83"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="78" id="DgE-SX-uDT"/>
-                                    <constraint firstAttribute="width" constant="78" id="VvD-Zl-iwr"/>
-                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Publish">
@@ -57,9 +53,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xie-Cx-1GC" secondAttribute="bottom" constant="16" id="2a2-dZ-XkS"/>
+                            <constraint firstItem="Xie-Cx-1GC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="2dB-o6-17U"/>
+                            <constraint firstItem="Xie-Cx-1GC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="6f6-vq-JxT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bbt-YJ-pDo" secondAttribute="bottom" id="CN7-RP-i71"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bbt-YJ-pDo" secondAttribute="trailing" id="I8V-a4-h83"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xie-Cx-1GC" secondAttribute="trailing" constant="16" id="Tw9-tk-6ix"/>
+                            <constraint firstItem="Xie-Cx-1GC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="Xjm-j7-7zU"/>
                             <constraint firstItem="Bbt-YJ-pDo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jlg-0o-kmH"/>
                             <constraint firstItem="Bbt-YJ-pDo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tA6-wz-xK3"/>
                         </constraints>
@@ -83,34 +82,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="v2R-MS-Bde">
-                                <rect key="frame" x="16" y="244" width="382" height="268"/>
+                                <rect key="frame" x="16" y="269" width="382" height="368"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mxl-5i-A4z">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="1Nv-C0-Ct8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9wV-S5-4Nj">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9wV-S5-4Nj">
                                         <rect key="frame" x="0.0" y="56" width="382" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="kQc-WC-XEM"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input content" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zzm-YF-89R">
-                                        <rect key="frame" x="0.0" y="112" width="382" height="100"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" text="input content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2bP-qk-fE1">
+                                        <rect key="frame" x="0.0" y="112" width="382" height="200"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="77C-SX-AK5"/>
+                                            <constraint firstAttribute="height" constant="200" id="ioo-sZ-vG2"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBq-Of-0rB">
-                                        <rect key="frame" x="0.0" y="228" width="382" height="40"/>
+                                        <rect key="frame" x="0.0" y="328" width="382" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="b0m-BS-NrY"/>
@@ -128,14 +129,15 @@
                         <viewLayoutGuide key="safeArea" id="Wce-UB-sDs"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="v2R-MS-Bde" firstAttribute="top" secondItem="Wce-UB-sDs" secondAttribute="top" constant="200" id="GSf-oZ-ljv"/>
+                            <constraint firstItem="v2R-MS-Bde" firstAttribute="centerX" secondItem="Wce-UB-sDs" secondAttribute="centerX" id="5JO-h8-o4W"/>
                             <constraint firstItem="v2R-MS-Bde" firstAttribute="leading" secondItem="Wce-UB-sDs" secondAttribute="leading" constant="16" id="Q3L-jl-6Fe"/>
                             <constraint firstItem="Wce-UB-sDs" firstAttribute="trailing" secondItem="v2R-MS-Bde" secondAttribute="trailing" constant="16" id="SBP-2o-pDw"/>
+                            <constraint firstItem="v2R-MS-Bde" firstAttribute="centerY" secondItem="Wce-UB-sDs" secondAttribute="centerY" id="eeN-8p-n9D"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="inputCategoryTextField" destination="9wV-S5-4Nj" id="H7t-gZ-eta"/>
-                        <outlet property="inputContentTextField" destination="zzm-YF-89R" id="evf-t6-AeZ"/>
+                        <outlet property="inputContentTextView" destination="2bP-qk-fE1" id="2Xa-45-vvB"/>
                         <outlet property="inputTitleTextField" destination="mxl-5i-A4z" id="mWj-fW-nCE"/>
                     </connections>
                 </viewController>
@@ -145,6 +147,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
