@@ -8,9 +8,22 @@
 import Foundation
 import FirebaseFirestore
 
+enum Result<T> {
+
+    case success(T)
+
+    case failure(Error)
+}
+
 class PublisherManager {
     
     let articles = Firestore.firestore().collection("articles")
+    
+    let authorEmail = "Jenny.Hung@gmail.com"
+    
+    let authorId = "JennyHung0402"
+    
+    let authorName = "Jenny Hung"
     
     // 新增
     func addData(title: String, category: String, content: String) {
@@ -18,11 +31,10 @@ class PublisherManager {
         let document = articles.document()
         
         let data: [String: Any] = [
-            
             "author": [
-                "email": "Jenny.Hung@gmail.com",
-                "id": "JennyHung0402",
-                "name": "Jenny Hung"
+                "email": authorEmail,
+                "id": authorId,
+                "name": authorName
             ],
             "title": title,
             "content": content,
@@ -36,7 +48,7 @@ class PublisherManager {
     }
     
     // MARK: - 取得 Firebase Data (所有 Articles)
-    func getData(completion: @escaping (_ data: [Publisher]) -> Void) {
+    func getData(completion: @escaping (Result<[Publisher]>) -> Void) {
         
         articles.addSnapshotListener { (snapshot, error) in
             
@@ -45,6 +57,8 @@ class PublisherManager {
             guard let snapshot = snapshot else {
 
                 print("Error fetching document: \(error!)")
+
+                completion(Result.failure(error!))
 
                 return
             }
@@ -98,7 +112,13 @@ class PublisherManager {
                 
             }
             
-            completion(sortedPublisher)
+            completion(Result.success(sortedPublisher))
+            
+            if let error = error {
+                
+                completion(Result.failure(error))
+                
+            }
             
         }
         

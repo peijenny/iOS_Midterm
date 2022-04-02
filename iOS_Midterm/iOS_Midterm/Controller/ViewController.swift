@@ -54,11 +54,22 @@ class ViewController: UIViewController {
     
     func fetchData() {
         
-        publisherManager.getData { [weak self] data in
+        publisherManager.getData(completion: { [weak self] result in
             
-            self?.publishers = data
+            switch result {
+
+            case .success(let data):
+
+                self?.publishers = data
+                
+            case .failure(let error):
+
+                print(error)
+                
+            }
             
-        }
+            
+        })
     }
 
     @IBAction func presentToArticlePage(_ sender: UIButton) {
