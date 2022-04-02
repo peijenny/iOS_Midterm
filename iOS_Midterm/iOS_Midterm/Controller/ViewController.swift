@@ -48,6 +48,9 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
+        AddArticleButton.imageView?.contentMode = .scaleAspectFill
+
+        
         AddArticleButton.layer.cornerRadius = AddArticleButton.frame.width / 2
         
     }

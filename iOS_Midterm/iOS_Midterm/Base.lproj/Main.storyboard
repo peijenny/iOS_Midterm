@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,12 +38,12 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xie-Cx-1GC">
-                                <rect key="frame" x="315" y="763" width="83" height="83"/>
+                                <rect key="frame" x="332" y="780" width="62" height="62"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Publish">
-                                    <fontDescription key="titleFontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="15"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <imageReference key="image" image="plus" catalog="system" symbolScale="default"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="presentToArticlePage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NXJ-xd-jHi"/>
@@ -52,12 +53,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xie-Cx-1GC" secondAttribute="bottom" constant="16" id="2a2-dZ-XkS"/>
-                            <constraint firstItem="Xie-Cx-1GC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="2dB-o6-17U"/>
-                            <constraint firstItem="Xie-Cx-1GC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="6f6-vq-JxT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xie-Cx-1GC" secondAttribute="bottom" constant="20" id="2a2-dZ-XkS"/>
+                            <constraint firstItem="Xie-Cx-1GC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.15" id="2dB-o6-17U"/>
+                            <constraint firstItem="Xie-Cx-1GC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.15" id="6f6-vq-JxT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bbt-YJ-pDo" secondAttribute="bottom" id="CN7-RP-i71"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bbt-YJ-pDo" secondAttribute="trailing" id="I8V-a4-h83"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xie-Cx-1GC" secondAttribute="trailing" constant="16" id="Tw9-tk-6ix"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xie-Cx-1GC" secondAttribute="trailing" constant="20" id="Tw9-tk-6ix"/>
                             <constraint firstItem="Xie-Cx-1GC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="Xjm-j7-7zU"/>
                             <constraint firstItem="Bbt-YJ-pDo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jlg-0o-kmH"/>
                             <constraint firstItem="Bbt-YJ-pDo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tA6-wz-xK3"/>
@@ -81,53 +82,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="v2R-MS-Bde">
-                                <rect key="frame" x="16" y="269" width="382" height="368"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="v2R-MS-Bde">
+                                <rect key="frame" x="16" y="273" width="382" height="360"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mxl-5i-A4z">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="40"/>
+                                        <rect key="frame" x="8" y="8" width="366" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="1Nv-C0-Ct8"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="input category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9wV-S5-4Nj">
-                                        <rect key="frame" x="0.0" y="56" width="382" height="40"/>
+                                        <rect key="frame" x="8" y="56" width="366" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="kQc-WC-XEM"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                     </textField>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" text="input content" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2bP-qk-fE1">
-                                        <rect key="frame" x="0.0" y="112" width="382" height="200"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2bP-qk-fE1">
+                                        <rect key="frame" x="8" y="104" width="366" height="200"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="ioo-sZ-vG2"/>
                                         </constraints>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="16"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBq-Of-0rB">
-                                        <rect key="frame" x="0.0" y="328" width="382" height="40"/>
+                                        <rect key="frame" x="8" y="312" width="366" height="40"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="b0m-BS-NrY"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Send Article"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Send Article">
+                                            <fontDescription key="titleFontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="sendArticleButton:" destination="rrR-WJ-q6e" eventType="touchUpInside" id="P0Z-Id-wAd"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Wce-UB-sDs"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="v2R-MS-Bde" firstAttribute="centerX" secondItem="Wce-UB-sDs" secondAttribute="centerX" id="5JO-h8-o4W"/>
                             <constraint firstItem="v2R-MS-Bde" firstAttribute="leading" secondItem="Wce-UB-sDs" secondAttribute="leading" constant="16" id="Q3L-jl-6Fe"/>
@@ -147,6 +152,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
